@@ -308,7 +308,7 @@ const translations: any = {
     'ride.time': 'Hora',
     'ride.confirm': 'Confirmar Viaje',
     'ride.button': 'Solicitar Viaje',
-    'ride.tooltip': 'Haz clic para solicitar un viaje',
+    'ride.tooltip': 'Haz click para solicitar un viaje',
     'ride.loading': 'Cargando rutas disponibles...',
   },
   en: {

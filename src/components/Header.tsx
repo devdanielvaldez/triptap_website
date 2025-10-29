@@ -3,12 +3,14 @@ import { Menu, X } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import LanguageToggle from './LanguageToggle';
 import ContactModal from './ContactModal';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const { t } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +22,11 @@ const Header = () => {
 
   const handleContactClick = () => {
     setIsContactModalOpen(true);
+  };
+
+  const handleNavigation = (path: any) => {
+    navigate(path);
+    setIsMenuOpen(false);
   };
 
   return (
@@ -40,30 +47,30 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
+            <button onClick={() => handleNavigation('/')} className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
               {t('nav.home')}
-            </a>
-            <a href="/esim" className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
+            </button>
+            <button onClick={() => handleNavigation('/esim')} className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
               eSIM
-            </a>
-            <a href="/deals" className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
+            </button>
+            <button onClick={() => handleNavigation('/deals')} className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
               Ofertas
-            </a>
-            <a href="/entertainment" className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
+            </button>
+            <button onClick={() => handleNavigation('/entertainment')} className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
               Experiencias
-            </a>
-            <a href="/advertising" className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
+            </button>
+            <button onClick={() => handleNavigation('/advertising')} className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
               {t('nav.advertising')}
-            </a>
-            <a href="/#aliados" className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
+            </button>
+            <button onClick={() => handleNavigation('/#aliados')} className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
               {t('nav.partners')}
-            </a>
-            <a href="/business" className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
+            </button>
+            <button onClick={() => handleNavigation('/business')} className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
               {t('nav.businesses')}
-            </a>
-            <a href="/drivers" className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
+            </button>
+            <button onClick={() => handleNavigation('/drivers')} className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
               {t('nav.drivers')}
-            </a>
+            </button>
             <LanguageToggle />
           </nav>
 
@@ -85,30 +92,30 @@ const Header = () => {
           
           {/* Mobile menu content */}
           <nav className="relative z-50 flex flex-col items-center justify-center h-screen space-y-6 text-center px-4 pt-20">
-            <a href="/" onClick={() => setIsMenuOpen(false)} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
+            <button onClick={() => handleNavigation('/')} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
               {t('nav.home')}
-            </a>
-            <a href="/esim" onClick={() => setIsMenuOpen(false)} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
+            </button>
+            <button onClick={() => handleNavigation('/esim')} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
               eSIM
-            </a>
-            <a href="/deals" onClick={() => setIsMenuOpen(false)} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
+            </button>
+            <button onClick={() => handleNavigation('/deals')} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
               Ofertas
-            </a>
-            <a href="/entertainment" onClick={() => setIsMenuOpen(false)} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
+            </button>
+            <button onClick={() => handleNavigation('/entertainment')} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
               Experiencias
-            </a>
-            <a href="/advertising" onClick={() => setIsMenuOpen(false)} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
+            </button>
+            <button onClick={() => handleNavigation('/advertising')} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
               {t('nav.advertising')}
-            </a>
-            <a href="/#aliados" onClick={() => setIsMenuOpen(false)} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
+            </button>
+            <button onClick={() => handleNavigation('/#aliados')} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
               {t('nav.partners')}
-            </a>
-            <a href="/business" onClick={() => setIsMenuOpen(false)} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
+            </button>
+            <button onClick={() => handleNavigation('/business')} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
               {t('nav.businesses')}
-            </a>
-            <a href="/drivers" onClick={() => setIsMenuOpen(false)} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
+            </button>
+            <button onClick={() => handleNavigation('/drivers')} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
               {t('nav.drivers')}
-            </a>
+            </button>
             <div className="pt-8">
               <LanguageToggle />
             </div>
