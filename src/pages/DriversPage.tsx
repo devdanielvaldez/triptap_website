@@ -67,90 +67,114 @@ const DriversPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900 flex items-center justify-center relative overflow-hidden pt-20">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-[#EF5AFF] rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#4EBEFF] rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-green-400 rounded-full blur-3xl animate-pulse delay-500"></div>
+<section className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900 flex items-center justify-center relative overflow-hidden pt-20">
+  {/* Animated Background Elements */}
+  <div className="absolute inset-0 opacity-20">
+    <div className="absolute top-20 left-10 w-72 h-72 bg-[#EF5AFF] rounded-full blur-3xl animate-pulse"></div>
+    <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#4EBEFF] rounded-full blur-3xl animate-pulse delay-1000"></div>
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-green-400 rounded-full blur-3xl animate-pulse delay-500"></div>
+  </div>
+
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Content */}
+      <div className="text-center lg:text-left">
+        <div className="mb-8 animate-fade-in-up">
+          <span className="inline-block bg-gradient-to-r from-[#EF5AFF] to-[#4EBEFF] bg-clip-text text-transparent text-lg font-semibold mb-4">
+            Para Conductores
+          </span>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            {t('drivers.hero.title')}
+            <span className="bg-gradient-to-r from-[#EF5AFF] to-[#4EBEFF] bg-clip-text text-transparent"> {t('drivers.hero.subtitle')}</span>
+          </h1>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Content */}
-            <div className="text-center lg:text-left">
-              <div className="mb-8 animate-fade-in-up">
-                <span className="inline-block bg-gradient-to-r from-[#EF5AFF] to-[#4EBEFF] bg-clip-text text-transparent text-lg font-semibold mb-4">
-                  Para Conductores
-                </span>
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                  {t('drivers.hero.title')}
-                  <span className="bg-gradient-to-r from-[#EF5AFF] to-[#4EBEFF] bg-clip-text text-transparent"> {t('drivers.hero.subtitle')}</span>
-                </h1>
-              </div>
+        <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl animate-fade-in-up delay-200">
+          {t('drivers.hero.description')}
+        </p>
 
-              <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl animate-fade-in-up delay-200">
-                {t('drivers.hero.description')}
-              </p>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 animate-fade-in-up delay-400">
+          <button 
+            onClick={handleDriverClick}
+            className="bg-gradient-to-r from-green-400 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-lg"
+          >
+            {t('drivers.hero.cta.join')}
+          </button>
+        </div>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-16 animate-fade-in-up delay-400">
-                <button 
-                  onClick={handleDriverClick}
-                  className="bg-gradient-to-r from-green-400 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-lg"
-                >
-                  {t('drivers.hero.cta.join')}
-                </button>
-              </div>
+        {/* App Store Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-16 animate-fade-in-up delay-500">
+          <a 
+            href="https://apps.apple.com/us/app/triptap-drivers/id6748827812" 
+            className="inline-block transition-transform duration-300 hover:scale-105"
+          >
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png" 
+              alt="Download on App Store" 
+              className="h-12 w-auto max-w-[160px]"
+            />
+          </a>
+          <a 
+            href="https://play.google.com/store/apps/details?id=com.triptap.drivers" 
+            className="inline-block transition-transform duration-300 hover:scale-105"
+          >
+            <img 
+              src="https://bciconline.com/wp-content/uploads/2025/09/1664287128google-play-store-logo-png.png" 
+              alt="Get it on Google Play" 
+              className="h-12 w-auto max-w-[160px]"
+            />
+          </a>
+        </div>
 
-              {/* Quick Stats */}
-              <div className="grid grid-cols-3 gap-6 animate-fade-in-up delay-600 mb-20">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">100%</div>
-                  <div className="text-gray-400 text-sm">Ganancias Viajes</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#EF5AFF] mb-2">24h</div>
-                  <div className="text-gray-400 text-sm">Pagos Rápidos</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#4EBEFF] mb-2">+5K</div>
-                  <div className="text-gray-400 text-sm">Conductores</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Video */}
-            <div className="flex justify-center lg:justify-end animate-fade-in-up delay-800">
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-600 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 scale-110"></div>
-                <div className="relative bg-black/20 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10">
-                  <video 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline
-                    className="w-full max-w-lg h-auto group-hover:scale-105 transition-transform duration-500"
-                  >
-                    <source src="https://video.wixstatic.com/video/77fac4_3dd5d2f7fa4b44fe9bf3b91ec3b66672/1080p/mp4/file.mp4" type="video/mp4" />
-                  </video>
-                  
-                  {/* Play overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20">
-                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                      <Play className="w-8 h-8 text-white ml-1" />
-                    </div>
-                  </div>
-                  
-                  {/* Floating elements */}
-                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-green-400 rounded-full animate-bounce"></div>
-                  <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-[#EF5AFF] rounded-full animate-bounce delay-500"></div>
-                </div>
-              </div>
-            </div>
+        {/* Quick Stats */}
+        <div className="grid grid-cols-3 gap-6 animate-fade-in-up delay-600 mb-20">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-green-400 mb-2">100%</div>
+            <div className="text-gray-400 text-sm">Ganancias Viajes</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-[#EF5AFF] mb-2">24h</div>
+            <div className="text-gray-400 text-sm">Pagos Rápidos</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-[#4EBEFF] mb-2">+5K</div>
+            <div className="text-gray-400 text-sm">Conductores</div>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Video */}
+      <div className="flex justify-center lg:justify-end animate-fade-in-up delay-800">
+        <div className="relative group">
+          <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-600 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 scale-110"></div>
+          <div className="relative bg-black/20 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10">
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              className="w-full max-w-lg h-auto group-hover:scale-105 transition-transform duration-500"
+            >
+              <source src="https://video.wixstatic.com/video/77fac4_3dd5d2f7fa4b44fe9bf3b91ec3b66672/1080p/mp4/file.mp4" type="video/mp4" />
+            </video>
+            
+            {/* Play overlay */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20">
+              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                <Play className="w-8 h-8 text-white ml-1" />
+              </div>
+            </div>
+            
+            {/* Floating elements */}
+            <div className="absolute -top-4 -right-4 w-8 h-8 bg-green-400 rounded-full animate-bounce"></div>
+            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-[#EF5AFF] rounded-full animate-bounce delay-500"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Benefits Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 relative overflow-hidden">
