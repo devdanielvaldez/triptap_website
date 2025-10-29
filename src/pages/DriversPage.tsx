@@ -103,8 +103,8 @@ const DriversPage = () => {
           </button>
         </div>
 
-        {/* App Store Buttons - Modificado para mobile */}
-        <div className="flex flex-row justify-center gap-4 mb-16 animate-fade-in-up delay-500">
+        {/* App Store Buttons - Modificado para mobile centrado y desktop a la izquierda */}
+        <div className="flex flex-row justify-center lg:justify-start gap-4 mb-16 animate-fade-in-up delay-500">
           <a 
             href="#" 
             className="inline-block transition-transform duration-300 hover:scale-105"
