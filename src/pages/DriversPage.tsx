@@ -103,10 +103,10 @@ const DriversPage = () => {
           </button>
         </div>
 
-        {/* App Store Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-16 animate-fade-in-up delay-500">
+        {/* App Store Buttons - Modificado para mobile */}
+        <div className="flex flex-row justify-center gap-4 mb-16 animate-fade-in-up delay-500">
           <a 
-            href="https://apps.apple.com/us/app/triptap-drivers/id6748827812" 
+            href="#" 
             className="inline-block transition-transform duration-300 hover:scale-105"
           >
             <img 
@@ -116,7 +116,7 @@ const DriversPage = () => {
             />
           </a>
           <a 
-            href="https://play.google.com/store/apps/details?id=com.triptap.drivers" 
+            href="#" 
             className="inline-block transition-transform duration-300 hover:scale-105"
           >
             <img 
