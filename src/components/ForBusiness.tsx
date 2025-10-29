@@ -1,10 +1,12 @@
 import React from 'react';
 import { Target, TrendingUp, Eye } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useNavigate } from 'react-router-dom';
 
 const ForBusinesses = () => {
   const { t } = useLanguage();
   const [isAdvertisingModalOpen, setIsAdvertisingModalOpen] = React.useState(false);
+  const navigate = useNavigate();
 
   const handleAdvertiseClick = () => {
     setIsAdvertisingModalOpen(true);
@@ -83,12 +85,12 @@ const ForBusinesses = () => {
               >
                 {t('business.cta.campaign')}
               </button>
-              <a 
-                href="/business"
+              <button 
+                onClick={() => navigate('/business')}
                 className="border-2 border-[#EF5AFF] text-[#EF5AFF] px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#EF5AFF] hover:text-white transition-all duration-300"
               >
                 {t('business.cta.learn')}
-              </a>
+              </button>
             </div>
           </div>
         </div>
