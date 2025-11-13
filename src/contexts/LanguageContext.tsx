@@ -315,7 +315,7 @@ const translations: any = {
     // Header
     'nav.home': 'Home',
     'nav.advertising': 'Advertising',
-    'nav.partners': 'Partners',
+    'nav.partners': 'Events',
     'nav.businesses': 'Businesses',
     'nav.drivers': 'Drivers',
     'nav.contact': 'Contact',
