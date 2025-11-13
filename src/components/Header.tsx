@@ -62,7 +62,7 @@ const Header = () => {
             <button onClick={() => handleNavigation('/advertising')} className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
               {t('nav.advertising')}
             </button>
-            <button onClick={() => handleNavigation('/#aliados')} className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
+            <button onClick={() => handleNavigation('/publish-events')} className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
               {t('nav.partners')}
             </button>
             <button onClick={() => handleNavigation('/business')} className="text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium">
@@ -107,7 +107,7 @@ const Header = () => {
             <button onClick={() => handleNavigation('/advertising')} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
               {t('nav.advertising')}
             </button>
-            <button onClick={() => handleNavigation('/#aliados')} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
+            <button onClick={() => handleNavigation('/publish-events')} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">
               {t('nav.partners')}
             </button>
             <button onClick={() => handleNavigation('/business')} className="block text-white hover:text-[#EF5AFF] transition-colors duration-300 font-medium text-2xl">

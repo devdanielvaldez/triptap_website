@@ -17,6 +17,7 @@ import RequestRidePage from './pages/RequestRidePage';
 import TaxiAnimations from './components/TaxiAnimation';
 import FloatingRideButton from './components/FloatingRideButton';
 import TripStatusPage from './pages/TripStatusPage';
+import PublishEventPage from './pages/SendEventsPage';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <Route path="/delete-account" element={<DeleteAccountPage />} />
             <Route path="/request-ride" element={<RequestRidePage />} />
             <Route path="/trip-status/:requestId" element={<TripStatusPage />} />
+            <Route path="/publish-events" element={<PublishEventPage />}/>
           </Routes>
           <FloatingRideButton />
         </div>

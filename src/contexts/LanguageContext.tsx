@@ -13,7 +13,7 @@ const translations: any = {
     // Header
     'nav.home': 'Inicio',
     'nav.advertising': 'Publicidad',
-    'nav.partners': 'Aliados',
+    'nav.partners': 'Eventos',
     'nav.businesses': 'Empresas',
     'nav.drivers': 'Conductores',
     'nav.contact': 'Contacto',
@@ -56,7 +56,7 @@ const translations: any = {
     
     // Partners
     'partners.title': 'Nuestros',
-    'partners.allies': 'aliados',
+    'partners.allies': 'Eventos',
     'partners.description': 'Marcas líderes mundiales confían en TripTap para conectar con sus audiencias',
     'partners.global': 'Partnerships Globales',
     'partners.technology': 'Tecnología Confiable',
